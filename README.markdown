@@ -1,9 +1,9 @@
-= Shawty Client
+# Shawty Client
 
 For use with [Shawty](http://github.com/JackDanger/shawty-server)
 
 
-== HowTo
+## HowTo
 
     server = Shawty.new "http://my.shawty.server.com:8888/"
     link = server.shrink "http://maps.google.com/maps/..."
