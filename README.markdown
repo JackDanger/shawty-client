@@ -5,7 +5,7 @@ For use with [Shawty](http://github.com/JackDanger/shawty-server)
 
 == HowTo
 
-    server = Shawty.new("http://my.shawty.server.com:8888/")
+    server = Shawty.new "http://my.shawty.server.com:8888/"
     link = server.shrink "http://maps.google.com/maps/..."
     # => "http://my.shawty.server.com:8888/a7D"
     biggie = server.expand link
