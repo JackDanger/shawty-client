@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shawty-client}
-  s.version = "1.0.1"
+  s.version = "1.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jack Danger Canty"]
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
      "README.markdown",
      "Rakefile",
      "VERSION",
-     "lib/shawty_client.rb",
+     "lib/shawty-client.rb",
      "shawty-client.gemspec",
      "test/helper.rb",
      "test/test_shawty_client.rb"
