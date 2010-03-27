@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{shawty-client}
-  s.version = "1.0.0"
+  s.version = "1.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jack Danger Canty"]
-  s.date = %q{2010-03-26}
+  s.date = %q{2010-03-27}
   s.description = %q{Connects any Ruby app to a Shawty-powered url-shortening server}
   s.email = %q{gitcommit@6brand.com}
   s.extra_rdoc_files = [
