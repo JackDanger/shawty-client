@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/shawty_client.rb",
+     "shawty-client.gemspec",
      "test/helper.rb",
      "test/test_shawty_client.rb"
   ]
