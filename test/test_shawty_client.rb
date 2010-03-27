@@ -2,16 +2,41 @@ require 'helper'
 
 class TestShawtyClient < Test::Unit::TestCase
 
-  # Damn, not a whole lot to test really until I start writing mocks.
 
-  context "sets server properly" do
+  context "client" do
     setup {
       @server = Shawty.new("http://get.shawty.com")
+      @url    = "http://long.url/path"
+      @shawt  = "http://get.shawty.com/1DgB6"
+
     }
-    should "set server instance" do
-      assert_equal URI.parse("http://get.shawty.com"),
-                   @server.instance_variable_get("@server")
+    context "shrinking a url" do
+      setup {
+        response = stub
+        response.expects(:read_body).returns(@shawt).once
+        http = stub
+        http.expects(:post).returns(response).once
+        Net::HTTP.expects(:start).yields(http).once
+
+        @server.shrink @url
+      }
+      should "run expectations" do
+        assert true
+      end
+    end
+    context "expanding a url" do
+      setup {
+        response = stub
+        response.expects(:[]).with('Location').returns(@url).once
+        http = stub
+        http.expects(:get).with(URI.parse(@shawt).path).returns(response).once
+        Net::HTTP.expects(:start).yields(http).once
+
+        @server.expand @shawt
+      }
+      should "run expectations" do
+        assert true
+      end
     end
   end
-
 end

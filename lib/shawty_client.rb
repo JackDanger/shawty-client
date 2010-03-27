@@ -22,7 +22,7 @@ class Shawty
   protected
 
     def start
-      Net::HTTP.start(@server.host, @server.port) do |http|
+      Net::HTTP.start @server.host, @server.port do |http|
         yield http
       end
     end
